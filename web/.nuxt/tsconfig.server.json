@@ -53,7 +53,7 @@
         "../../node_modules/.pnpm/@unhead+vue@2.0.0_vue@3.5.13_typescript@5.8.2_/node_modules/@unhead/vue"
       ],
       "@nuxt/devtools": [
-        "../../node_modules/.pnpm/@nuxt+devtools@2.3.1_vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.2_terser@5._4latx3sfkqeb6474bjj7cpfddy/node_modules/@nuxt/devtools"
+        "../../node_modules/.pnpm/@nuxt+devtools@2.3.1_vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_less@4.2.2_lightningcss_9a70e3340b7f38dd2344fa141e8c54ec/node_modules/@nuxt/devtools"
       ],
       "vue": [
         "../../node_modules/.pnpm/vue@3.5.13_typescript@5.8.2/node_modules/vue"
@@ -77,10 +77,10 @@
         "../../node_modules/.pnpm/@nuxt+schema@3.16.1/node_modules/@nuxt/schema"
       ],
       "nuxt": [
-        "../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_lightningcss@1_ewsogftpzrzz6ffikhnmwbotzq/node_modules/nuxt"
+        "../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_less@4.2_738efdeac2d18322a778e0b4115a2556/node_modules/nuxt"
       ],
       "vite/client": [
-        "../../node_modules/.pnpm/vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.2_terser@5.39.0_yaml@2.7.0/node_modules/vite/client"
+        "../../node_modules/.pnpm/vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_less@4.2.2_lightningcss@1.29.2_terser@5.39.0_yaml@2.7.0/node_modules/vite/client"
       ],
       "#shared": [
         "../shared"
@@ -101,10 +101,10 @@
         "./*"
       ],
       "#internal/nuxt/paths": [
-        "../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_lightningcss@1_ewsogftpzrzz6ffikhnmwbotzq/node_modules/nuxt/dist/core/runtime/nitro/utils/paths"
+        "../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_less@4.2_738efdeac2d18322a778e0b4115a2556/node_modules/nuxt/dist/core/runtime/nitro/utils/paths"
       ],
       "#unhead/composables": [
-        "../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_lightningcss@1_ewsogftpzrzz6ffikhnmwbotzq/node_modules/nuxt/dist/head/runtime/composables/v3"
+        "../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_less@4.2_738efdeac2d18322a778e0b4115a2556/node_modules/nuxt/dist/head/runtime/composables/v3"
       ]
     },
     "lib": [
@@ -115,7 +115,7 @@
   },
   "include": [
     "./types/nitro-nuxt.d.ts",
-    "../../node_modules/.pnpm/@nuxt+devtools@2.3.1_vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.2_terser@5._4latx3sfkqeb6474bjj7cpfddy/node_modules/@nuxt/devtools/runtime/server",
+    "../../node_modules/.pnpm/@nuxt+devtools@2.3.1_vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_less@4.2.2_lightningcss_9a70e3340b7f38dd2344fa141e8c54ec/node_modules/@nuxt/devtools/runtime/server",
     "../../node_modules/.pnpm/@nuxt+telemetry@2.6.6_magicast@0.3.5/node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
     "../**/*",
@@ -124,8 +124,8 @@
   "exclude": [
     "../node_modules",
     "../../node_modules",
-    "../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_lightningcss@1_ewsogftpzrzz6ffikhnmwbotzq/node_modules/nuxt/node_modules",
-    "../../node_modules/.pnpm/@nuxt+devtools@2.3.1_vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_lightningcss@1.29.2_terser@5._4latx3sfkqeb6474bjj7cpfddy/node_modules/@nuxt/devtools/node_modules",
+    "../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_less@4.2_738efdeac2d18322a778e0b4115a2556/node_modules/nuxt/node_modules",
+    "../../node_modules/.pnpm/@nuxt+devtools@2.3.1_vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_less@4.2.2_lightningcss_9a70e3340b7f38dd2344fa141e8c54ec/node_modules/@nuxt/devtools/node_modules",
     "../../node_modules/.pnpm/@nuxt+telemetry@2.6.6_magicast@0.3.5/node_modules/@nuxt/telemetry/node_modules",
     "../dist"
   ]

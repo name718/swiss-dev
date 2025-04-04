@@ -3,7 +3,16 @@
 
 # 忽略 node_modules 目录
 node_modules/
-
+**/output/
+**/dist/
+**/build/
+**/public/
+**/logs/
+**/cache/
+**/temp/
+**/temp/**
+**/temp/*
+**/temp/*/**
 **/node_modules/
 # 忽略所有的 .env 文件
 *.env

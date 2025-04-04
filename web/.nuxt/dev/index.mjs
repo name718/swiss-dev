@@ -1005,7 +1005,7 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _D_M_9_55YiyQySlEUGbh4u2aegzeDEk62FFH_3pBg = (function(nitro) {
+const _OMqYAVTeqPP1XfI5pdLIwNF87AGb5HhMmprzzOvMiKU = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
@@ -1030,7 +1030,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _olPMqAdX0gwE4ADJEd6S8Zd6RLPVVXiKaVdQxRiPSLQ = (nitroApp) => {
+const _xl6M4_VBAnEqRi9HqYBflQ4CZWD3om7o54TWg9gClnU = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1100,15 +1100,15 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _D_M_9_55YiyQySlEUGbh4u2aegzeDEk62FFH_3pBg,
-_olPMqAdX0gwE4ADJEd6S8Zd6RLPVVXiKaVdQxRiPSLQ
+  _OMqYAVTeqPP1XfI5pdLIwNF87AGb5HhMmprzzOvMiKU,
+_xl6M4_VBAnEqRi9HqYBflQ4CZWD3om7o54TWg9gClnU
 ];
 
-const _lazy_mABjuh = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_MKSNmZ = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_mABjuh, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_mABjuh, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_MKSNmZ, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_MKSNmZ, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
