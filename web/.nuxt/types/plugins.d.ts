@@ -19,7 +19,8 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../../node_modules/.pnpm/@nuxt+devtools@2.3.1_vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_less@4.2.2_lightningcss_9a70e3340b7f38dd2344fa141e8c54ec/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.server.js")> &
   InjectionType<typeof import("../../../node_modules/.pnpm/@nuxt+devtools@2.3.1_vite@6.2.3_@types+node@22.13.13_jiti@2.4.2_less@4.2.2_lightningcss_9a70e3340b7f38dd2344fa141e8c54ec/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.client.js")> &
   InjectionType<typeof import("../../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_less@4.2_738efdeac2d18322a778e0b4115a2556/node_modules/nuxt/dist/app/plugins/dev-server-logs.js")> &
-  InjectionType<typeof import("../../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_less@4.2_738efdeac2d18322a778e0b4115a2556/node_modules/nuxt/dist/app/plugins/check-if-layout-used.js")>
+  InjectionType<typeof import("../../../node_modules/.pnpm/nuxt@3.16.1_@parcel+watcher@2.5.1_@types+node@22.13.13_db0@0.3.1_ioredis@5.6.0_less@4.2_738efdeac2d18322a778e0b4115a2556/node_modules/nuxt/dist/app/plugins/check-if-layout-used.js")> &
+  InjectionType<typeof import("../../plugins/fontawesome.js")>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }

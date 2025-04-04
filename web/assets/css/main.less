@@ -1,1 +1,60 @@
 @import "variables.less";
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: @primary-bg;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* 新拟态基础样式 */
+.neumorphic {
+  background: @primary-bg;
+  border-radius: 12px;
+  box-shadow: 8px 8px 15px @shadow-dark, 
+             -8px -8px 15px @shadow-light;
+  
+  &:active,
+  &.active {
+    box-shadow: inset 3px 3px 5px @shadow-dark, 
+               inset -3px -3px 5px @shadow-light;
+  }
+}
+
+.neumorphic-inset {
+  box-shadow: inset 3px 3px 5px @shadow-dark, 
+             inset -3px -3px 5px @shadow-light;
+}
+
+// 悬停效果扩展
+.neumorphic-hover {
+  .neumorphic();
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 10px 10px 20px @shadow-dark, 
+               -10px -10px 20px @shadow-light;
+  }
+}
+
+// 按钮变体
+.neumorphic-btn {
+  .neumorphic();
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    .neumorphic-hover();
+  }
+  
+  &:active {
+    .neumorphic-inset();
+  }
+}
