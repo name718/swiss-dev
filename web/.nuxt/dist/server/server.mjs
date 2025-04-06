@@ -1,1 +1,0 @@
-export { default } from "file:///Users/majuntao/Downloads/code/swiss-dev/node_modules/.pnpm/@nuxt+vite-builder@3.16.1_@types+node@22.13.13_less@4.2.2_lightningcss@1.29.2_magicast@_021ad3a543ac93cbd56c11f2903cf960/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
