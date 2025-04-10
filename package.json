@@ -58,9 +58,11 @@
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.6",
     "zod": "^3.24.1",
+    "monaco-editor": "latest",
     "html2canvas": "latest",
     "three": "latest",
-    "howler": "latest"
+    "howler": "latest",
+    "@monaco-editor/react": "latest"
   },
   "devDependencies": {
     "@types/node": "^22",

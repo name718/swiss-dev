@@ -225,7 +225,7 @@ export function Header({ toggleSidebar, onToolSelect }: HeaderProps) {
           </button>
 
           <Link
-            href="https://github.com"
+            href="https://github.com/name718"
             target="_blank"
             rel="noopener noreferrer"
             className="neumorphic-button p-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-all duration-300"
@@ -315,13 +315,6 @@ export function Header({ toggleSidebar, onToolSelect }: HeaderProps) {
 
       {/* 登录模态框 */}
       <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} onLogin={handleLogin} />
-
-      {/* AI Generated Statement Banner */}
-      <div className="w-full bg-blue-100 dark:bg-blue-900/30 py-1 text-center text-sm text-blue-800 dark:text-blue-200">
-        {language === "zh"
-          ? "这个网站完全由AI生成，作者没有编写任何代码"
-          : "This website is completely AI generated, and the author has not written a single line of code"}
-      </div>
     </header>
   )
 }

@@ -38,6 +38,7 @@ import { RegexTester } from "@/components/tools/regex-tester"
 import { ResignationReasonGenerator } from "@/components/tools/resignation-reason-generator"
 import { ProcrastinationArena } from "@/components/tools/procrastination-arena"
 import { CorporateTranslator } from "@/components/tools/corporate-translator"
+import CodeEditor from "@/components/tools/code-editor"
 
 // Define external links
 const externalLinks: Record<string, string> = {
@@ -76,7 +77,8 @@ const implementedTools: string[] = [
   "/regex-tester",
   "/resignation-reason",
   "/procrastination-arena",
-  "/corporate-translator", // 添加新工具路由
+  "/corporate-translator",
+  "/code-editor", // 添加新工具路由
 ]
 
 // Main component
@@ -159,7 +161,8 @@ export default function Home() {
     "/regex-tester": <RegexTester />,
     "/resignation-reason": <ResignationReasonGenerator />,
     "/procrastination-arena": <ProcrastinationArena />,
-    "/corporate-translator": <CorporateTranslator />, // 添加新组件
+    "/corporate-translator": <CorporateTranslator />,
+    "/code-editor": <CodeEditor />, // 添加新组件
   }
 
   // Function to render the active tool
@@ -326,6 +329,11 @@ export default function Home() {
           en: "Translate corporate jargon to plain language and vice versa",
           zh: "将职场黑话转换为普通人话，或将普通人话包装成华丽的职场黑话",
         })
+      case "/code-editor":
+        return getMenuText({
+          en: "A powerful code editor with syntax highlighting and multiple language support",
+          zh: "强大的代码编辑器，支持语法高亮和多种编程语言",
+        })
       default:
         return ""
     }
@@ -397,20 +405,20 @@ function HomeContent({ onToolSelect }: { onToolSelect: (route: string) => void }
         {getMenuText(menuConfig.siteName)} - {t("app.tagline")}
       </h2>
 
-      {/* 新工具通知 - 消息废话翻译官 */}
-      <div className="mb-8 neumorphic-card p-4 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
+      {/* 新工具通知 - 代码编辑器 */}
+      <div className="mb-8 neumorphic-card p-4 rounded-xl bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
-            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-              新功能：消息废话翻译官 - 职场黑话转换器
+            <h3 className="text-xl font-bold bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text">
+              新功能：代码编辑器 - 支持多种编程语言
             </h3>
             <p className="text-neutral-600 dark:text-neutral-400 mt-1">
-              将职场黑话转换为普通人话，或将普通人话包装成华丽的职场黑话
+              强大的代码编辑器，支持语法高亮、代码格式化和多种编程语言
             </p>
           </div>
           <button
-            onClick={() => onToolSelect("/corporate-translator")}
-            className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/20"
+            onClick={() => onToolSelect("/code-editor")}
+            className="px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg text-white font-medium hover:from-green-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-green-500/20"
           >
             立即体验
           </button>

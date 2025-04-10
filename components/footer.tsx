@@ -22,9 +22,11 @@ export function Footer() {
           <div className="flex flex-col md:flex-row md:items-center gap-4">
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://github.com/name718"
                 className="neumorphic-icon-button p-2 rounded-full text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-all duration-300"
                 aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github size={18} />
               </a>

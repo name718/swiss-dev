@@ -49,6 +49,16 @@ export const menuConfig = {
             { name: { en: "Aspect Ratio Calculator", zh: "宽高比计算器" }, route: "/aspect-ratio-calculator" },
           ],
         },
+        {
+          name: {
+            en: "Editors",
+            zh: "编辑器",
+          },
+          tools: [
+            { name: { en: "Code Editor", zh: "代码编辑器" }, route: "/code-editor" },
+            { name: { en: "Markdown Editor", zh: "Markdown编辑器" }, route: "/markdown-editor" },
+          ],
+        },
       ],
     },
     // 职场工具 - 放在第二位
@@ -63,7 +73,6 @@ export const menuConfig = {
         { name: { en: "Slacking Progress Dashboard", zh: "摸鱼进度看板" }, route: "/slacking-dashboard" },
         { name: { en: "Resignation Reason Generator", zh: "离职原因生成器" }, route: "/resignation-reason" },
         { name: { en: "Procrastination Arena", zh: "拖延症斗兽场" }, route: "/procrastination-arena" },
-        // 添加新工具
         { name: { en: "Corporate Translator", zh: "消息废话翻译官" }, route: "/corporate-translator" },
       ],
       subItems: [], // Empty subItems array to maintain compatibility
@@ -280,8 +289,7 @@ export const menuConfig = {
     { name: { en: "2048 Game", zh: "2048游戏" }, route: "/game-2048", icon: "🎮" },
     { name: { en: "AI Assistants", zh: "AI工具" }, route: "/ai-tools", icon: "🤖" },
     { name: { en: "Workplace Comeback", zh: "职场工具" }, route: "/workplace-comeback", icon: "💼" },
-    // 添加新工具到快速访问
-    { name: { en: "Corporate Translator", zh: "消息废话翻译官" }, route: "/corporate-translator", icon: "🔄" },
+    { name: { en: "Code Editor", zh: "代码编辑器" }, route: "/code-editor", icon: "💻" },
   ],
   settings: {
     darkMode: true,
