@@ -137,4 +137,3 @@ export function SHAGenerator() {
     </div>
   )
 }
-

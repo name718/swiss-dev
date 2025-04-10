@@ -2,235 +2,195 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --radius: 0.5rem;
-  }
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
 
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer components {
-  /* Base neumorphic button */
+  .neumorphic-card {
+    @apply bg-neutral-100 dark:bg-neutral-800;
+    box-shadow: 6px 6px 12px 0px rgba(0, 0, 0, 0.1), -6px -6px 12px 0px rgba(255, 255, 255, 0.5);
+  }
+
+  .dark .neumorphic-card {
+    box-shadow: 6px 6px 12px 0px rgba(0, 0, 0, 0.3), -6px -6px 12px 0px rgba(255, 255, 255, 0.05);
+  }
+
   .neumorphic-button {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05), -5px -5px 10px rgba(255, 255, 255, 0.5);
-    transition: all 0.2s ease;
+    @apply bg-neutral-100 dark:bg-neutral-800;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.1), -4px -4px 8px 0px rgba(255, 255, 255, 0.8);
+  }
+
+  .dark .neumorphic-button {
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3), -4px -4px 8px 0px rgba(255, 255, 255, 0.05);
+    color: var(--text-primary-dark, #e0e0e0);
   }
 
   .neumorphic-button:hover {
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7);
-    transform: translateY(-1px);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1), -2px -2px 4px 0px rgba(255, 255, 255, 0.8);
+  }
+
+  .dark .neumorphic-button:hover {
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3), -2px -2px 4px 0px rgba(255, 255, 255, 0.05);
+    color: var(--text-primary-dark, #ffffff);
   }
 
   .neumorphic-button:active,
   .neumorphic-button-active {
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
-    transform: translateY(0);
-  }
-
-  /* Dark mode neumorphic button */
-  .dark .neumorphic-button {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.05);
-  }
-
-  .dark .neumorphic-button:hover {
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4), -3px -3px 6px rgba(255, 255, 255, 0.07);
-    transform: translateY(-1px);
+    box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.1), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.8);
   }
 
   .dark .neumorphic-button:active,
   .dark .neumorphic-button-active {
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(255, 255, 255, 0.05);
-    transform: translateY(0);
+    box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.3), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.05);
   }
 
-  /* Smaller neumorphic icon button */
   .neumorphic-icon-button {
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05), -3px -3px 6px rgba(255, 255, 255, 0.5);
-    transition: all 0.2s ease;
-  }
-
-  .neumorphic-icon-button:hover {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -2px -2px 4px rgba(255, 255, 255, 0.7);
-  }
-
-  .neumorphic-icon-button:active {
-    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1), inset -1px -1px 3px rgba(255, 255, 255, 0.5);
+    @apply bg-neutral-100 dark:bg-neutral-800;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1), -2px -2px 4px 0px rgba(255, 255, 255, 0.8);
   }
 
   .dark .neumorphic-icon-button {
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.05);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3), -2px -2px 4px 0px rgba(255, 255, 255, 0.05);
+  }
+
+  .neumorphic-icon-button:hover {
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1), -1px -1px 2px 0px rgba(255, 255, 255, 0.8);
   }
 
   .dark .neumorphic-icon-button:hover {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -2px -2px 4px rgba(255, 255, 255, 0.07);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3), -1px -1px 2px 0px rgba(255, 255, 255, 0.05);
+  }
+
+  .neumorphic-icon-button:active {
+    box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.1), inset -1px -1px 2px 0px rgba(255, 255, 255, 0.8);
   }
 
   .dark .neumorphic-icon-button:active {
-    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4), inset -1px -1px 3px rgba(255, 255, 255, 0.05);
+    box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.3), inset -1px -1px 2px 0px rgba(255, 255, 255, 0.05);
   }
 
-  /* Neumorphic card */
-  .neumorphic-card {
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.05), -8px -8px 16px rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
+  .neumorphic-inset {
+    @apply bg-neutral-100 dark:bg-neutral-800;
+    box-shadow: inset 4px 4px 8px 0px rgba(0, 0, 0, 0.1), inset -4px -4px 8px 0px rgba(255, 255, 255, 0.8);
   }
 
-  .neumorphic-card:hover {
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.07), -10px -10px 20px rgba(255, 255, 255, 0.7);
-    transform: translateY(-5px);
+  .dark .neumorphic-inset {
+    box-shadow: inset 4px 4px 8px 0px rgba(0, 0, 0, 0.3), inset -4px -4px 8px 0px rgba(255, 255, 255, 0.05);
   }
 
-  .dark .neumorphic-card {
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.05);
+  .neumorphic-button-danger {
+    @apply bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.1), -4px -4px 8px 0px rgba(255, 255, 255, 0.8);
   }
 
-  .dark .neumorphic-card:hover {
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4), -10px -10px 20px rgba(255, 255, 255, 0.07);
-    transform: translateY(-5px);
+  .dark .neumorphic-button-danger {
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3), -4px -4px 8px 0px rgba(255, 255, 255, 0.05);
   }
 
-  /* Neumorphic tag */
-  .neumorphic-tag {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05), -2px -2px 4px rgba(255, 255, 255, 0.5);
+  .neumorphic-button-danger:hover {
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1), -2px -2px 4px 0px rgba(255, 255, 255, 0.8);
   }
 
-  .dark .neumorphic-tag {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -2px -2px 4px rgba(255, 255, 255, 0.05);
+  .dark .neumorphic-button-danger:hover {
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3), -2px -2px 4px 0px rgba(255, 255, 255, 0.05);
   }
 
-  /* Neumorphic display (for calculator, timer, etc.) */
-  .neumorphic-display {
-    background-color: #f5f5f5;
-    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
-    transition: all 0.3s ease;
+  .neumorphic-button-danger:active {
+    box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.1), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.8);
   }
 
-  .dark .neumorphic-display {
-    background-color: #2a2a2a;
-    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.4), inset -3px -3px 6px rgba(255, 255, 255, 0.05);
+  .dark .neumorphic-button-danger:active {
+    box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.3), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.05);
   }
 
-  /* Neumorphic watch */
-  .neumorphic-watch {
-    box-shadow:
-      4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.7),
-      inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+  .animate-slideDown {
+    animation: slideDown 0.3s ease-out forwards;
   }
 
-  .dark .neumorphic-watch {
-    box-shadow:
-      4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.05),
-      inset 1px 1px 2px rgba(255, 255, 255, 0.05), inset -1px -1px 2px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  /* Tooltip styles */
-  [data-tooltip] {
-    position: relative;
-  }
-
-  [data-tooltip]:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-    white-space: nowrap;
-    z-index: 10;
-    opacity: 0;
-    animation: fadeIn 0.3s ease forwards;
-  }
-
-  @keyframes fadeIn {
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
     to {
       opacity: 1;
-      bottom: calc(100% + 10px);
+      transform: translateY(0);
     }
   }
 
-  /* Theme transition */
-  .theme-transition {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
   }
 
-  /* Enhanced transitions */
-  .transition-all {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
-  .transition-transform {
-    transition-property: transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
+  .animate-pulse-soft {
+    animation: pulseSoft 2s infinite;
   }
 
-  .transition-opacity {
-    transition-property: opacity;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
+  @keyframes pulseSoft {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
-  .transition-colors {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
+  .animate-bounce-soft {
+    animation: bounceSoft 2s infinite;
+  }
+
+  @keyframes bounceSoft {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .fullscreen-tool {
+    @apply fixed inset-0 z-40 bg-neutral-50 dark:bg-neutral-900 overflow-auto transition-all duration-300 ease-in-out;
   }
 }
-
